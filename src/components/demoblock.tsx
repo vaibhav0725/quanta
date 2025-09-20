@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { FloatingBanner } from './ui/Float-Banner/float-banner'
+import { FloatingBanner } from './ui/Float-Banner/index'
 
 export const DemoBlock = ({children}:{children :ReactNode}) => {
   return (

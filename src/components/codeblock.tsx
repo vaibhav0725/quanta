@@ -1,6 +1,6 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark,gradientDark,dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-export const CodeBlock = async ({
+export const CodeBlock = ({
     fileName,codeString,title,language
 }:{
     fileName?: string,
@@ -21,9 +21,13 @@ export const CodeBlock = async ({
                 {fileName}
               </div>
           }
-          <div className="bottom-3 w-full max-h-96 overflow-y-scroll rounded-xl border-neutral-800 border-1">
+          <div className=" relative w-full max-h-96 overflow-y-scroll rounded-xl border-neutral-800 border-1"
+              style={{
+                bottom: fileName ? "0.8rem" : "0px"
+              }}
+          >
               <SyntaxHighlighter language={language} style={dracula} customStyle={{
-                background: "#000000",
+                background: "#0a0a0a",
                 paddingLeft: 20,
                 paddingRight: 20,
                 paddingTop: 10,

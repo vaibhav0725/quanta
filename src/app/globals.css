@@ -20,5 +20,5 @@
   
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background: #1f1f1f; /* Style the thumb */
-    border-radius: 4px;
+    border-radius: 1px;
   }

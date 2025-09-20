@@ -8,11 +8,13 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }`
+
+    const installCommand = `npm install motion clsx tailwind-merge react-icons`;
+    
   return (
     <>
-        <CodeBlock codeString='npm i framer-motion clsx tailwind-merge' language='shell' title='Install dependencies'/>
-        <CodeBlock codeString={codeString} fileName='lib/utils.ts' language='javascript' title='Add utility file'/>
-        <CodeBlock codeString={codeString} fileName='lib/utils.ts' language='javascript' title='Code'/>
+        <CodeBlock codeString={installCommand} language='shell' title='Install dependencies'/>
+        <CodeBlock codeString={codeString} fileName='lib/utils.ts' language='typescript' title='Add utility file'/>
     </>
   )
 }

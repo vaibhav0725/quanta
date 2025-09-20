@@ -1,3 +1,9 @@
+/**
+ * @component TextDisplay
+ * @category Animation
+ * @description Text animation component with word-by-word reveal effect using blur and opacity transitions
+ * @prop words string The text to animate word by word
+ */
 "use client";
 import { motion } from "motion/react";
 

@@ -1,3 +1,9 @@
+/**
+ * @component FloatingBanner
+ * @category Animation
+ * @description An animated floating banner with text and arrow icon that bounces up and down
+ * @prop text string The text to display in the banner
+ */
 "use client";
 import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "motion/react"
