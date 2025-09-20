@@ -25,8 +25,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
+        <div
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: `
+            radial-gradient(125% 125% at 50% 10%, #000000 40%, oklch(29.3% 0.066 243.157) 100%)
+          `,
+          backgroundSize: "100% 100%",
+        }}
+      />
+      <div
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: `
+            linear-gradient(oklch(26.9% 0 0) 0.5px,transparent 0.5px),
+            linear-gradient(90deg, oklch(26.9% 0 0) 0.5px,transparent 0.5px)
+          `,
+          backgroundSize: "4rem 4rem"
+        }}
+      />
         {children}
       </body>
     </html>

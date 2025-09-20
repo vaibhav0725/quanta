@@ -1,26 +1,24 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-jetbrain: "JetBrains Mono", monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* In your main CSS file or a <style> block */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 1px; /* Set scrollbar width */
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: none; /* Style the track */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1f1f1f; /* Style the thumb */
+    border-radius: 4px;
+  }
