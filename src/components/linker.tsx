@@ -10,7 +10,7 @@ export const Linker = () => {
         <div className='text-center font-bold size-20 shadow-md relative'>
           <AnimatePresence>
           {active && <motion.span
-            layoutId='active'
+            layoutId='activelink'
             initial={{
               y: 20,
               filter: "blur(10px)"

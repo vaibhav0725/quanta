@@ -1,6 +1,6 @@
 "use client";
 import { cn } from '@/lib/utils'
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Sidebar } from './sidebar';
 import { MainContent } from './main-content';
 import { useSearchParams } from 'next/navigation'
@@ -19,9 +19,7 @@ export const Container = ({className}:
             <Sidebar/>
         </div>
         <div className='p-3 flex-1 text-white flex flex-col custom-scrollbar overflow-y-scroll max-h-screen mask-b-from-[80%]'>
-            <Suspense>
-              <MainContent component={search}/>
-            </Suspense>
+            <MainContent component={search}/>
         </div>
     </div>
   )
