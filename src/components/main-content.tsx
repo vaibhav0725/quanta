@@ -7,6 +7,7 @@ import { CodeBlock } from './codeblock';
 import { DemoCodeBlock } from './demo-codeblock';
 import { PropsTable } from './props-table';
 import { componentRegistry } from '@/lib/component-registry';
+import { Linker } from './linker';
 
 export const MainContent = ({component}:{component: string | null}) => {
     const [active, setActive] = useState<boolean>(true);
@@ -23,13 +24,8 @@ export const MainContent = ({component}:{component: string | null}) => {
     if (!componentInfo) {
         return (
             <div className='flex flex-col items-center justify-center h-full text-center'>
-                <h1 className='text-6xl font-semibold font-jetbrain tracking-[-2px] mb-4'>Quanta</h1>
-                <p className='text-xl text-neutral-400 mb-8'>Select a component from the sidebar to get started</p>
-                <div className='text-neutral-500'>
-                    <p>✨ Beautiful, animated UI components</p>
-                    <p>🚀 Built with Next.js, React, and Motion</p>
-                    <p>🎨 Dark theme with smooth animations</p>
-                </div>
+                <h1 className='text-6xl font-bold font-jetbrain tracking-[-6px] mb-4'>Quanta</h1>
+                <p className='text-xl text-neutral-400'>Select a component from the sidebar to get started</p>
             </div>
         );
     }

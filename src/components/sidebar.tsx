@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { FaCodeCompare, FaChevronDown, FaChevronRight } from "react-icons/fa6";
 import { getComponentsByCategory } from '@/lib/component-registry';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { Linker } from './linker';
 
 export const Sidebar = () => {
     const router = useRouter();
@@ -32,9 +34,12 @@ export const Sidebar = () => {
     };
 
     return (
-        <div className='p-2 border border-neutral-800 text-white h-full rounded-xl'>
-            <h2 className='text-4xl tracking-[-3px] font-jetbrain font-semibold flex items-center gap-2'>Quanta <FaCodeCompare/></h2>
-            <div className='flex flex-col px-2 mt-5 space-y-4'>
+        <div className='p-2 border border-neutral-800 text-white h-full rounded-xl relative overflow-hidden'>
+            <Link href="/">
+            <h2 className='text-4xl tracking-[-3px] font-jetbrain font-semibold flex items-center gap-2
+            '>Quanta</h2>
+            </Link>
+            <div className='flex flex-col px-2 mt-5 space-y-4 border-neutral-800 border-b h-[70%] overflow-y-scroll'>
                 {Object.entries(componentsByCategory).map(([category, components]) => (
                     <div key={category} className='space-y-2'>
                         {/* Category Header with Toggle Button */}
@@ -79,6 +84,9 @@ export const Sidebar = () => {
                         )}
                     </div>
                 ))}
+            </div>
+            <div className='inset-x-0 border-neutral-800 bottom-0 absolute w-fit scale-75 mx-auto flex justify-around'>
+                <Linker/>
             </div>
         </div>
     )

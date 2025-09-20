@@ -22,3 +22,10 @@
     background: #1f1f1f; /* Style the thumb */
     border-radius: 1px;
   }
+
+  .stroked-text {
+    -webkit-text-stroke-width: px; /* Sets the thickness of the stroke */
+    -webkit-text-stroke-color: white; /* Sets the color of the stroke */
+    -webkit-text-fill-color: transparent; /* Makes the inner text transparent */
+    color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+  }
